@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <maintenance_mode_configuration>
+            <general>
+                <enabled>1</enabled>
+                <maintenance_mode_enable>0</maintenance_mode_enable>
+            </general>
+            <page>
+                <response_code>500</response_code>
+                <maintenance_header><![CDATA[maintenance_mode]]></maintenance_header>
+                <cms_page><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+    <title>Oops!</title>
+</head>
+<body>
+    <div class='container'>
+        <h1>We are currently working on making the site better.</h1>
+        <h3>Incovenience is regretted. Please come back again in some time for some kickass offers!</h3>
+    </div>
+</body>]]></cms_page>
+            </page>
+        </maintenance_mode_configuration>
+    </default>
+</config>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_AdvancedMaintenanceMode::menu"
+             resource="Codilar_AdvancedMaintenanceMode::menu"
+             title="Advanced Maintenance Mode"
+             module="Codilar_AdvancedMaintenanceMode"
+             sortOrder="1000"
+             parent="Magento_Backend::system"
+             dependsOnModule="Magento_Backend"
+        />
+        <add id="Codilar_AdvancedMaintenanceMode::configuration"
+             resource="Codilar_AdvancedMaintenanceMode::configuration"
+             title="Configuration"
+             module="Codilar_AdvancedMaintenanceMode"
+             action="advancedmaintenancemode/index/index"
+             sortOrder="1000"
+             parent="Codilar_AdvancedMaintenanceMode::menu"
+        />
+    </menu>
+</config>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="codilar" translate="label" sortOrder="999" class="codilar-tab">
+            <label>Codilar Settings</label>
+        </tab>
+        <section id="maintenance_mode_configuration" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Codilar_AdvancedMaintenanceMode::menu</resource>
+            <class>separator-top</class>
+            <label>Maintenance Mode Configuration</label>
+            <tab>codilar</tab>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="maintenance_mode_enable" translate="label" type="select" sortOrder="20" showInDefault="1">
+                    <label>Maintenance Mode Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="page" translate="label" type="text" sortOrder="20" showInDefault="1">
+                <label>Page Configuration</label>
+                <field id="response_code" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Response code</label>
+                    <comment>Response code to send when maintenance mode is enabled</comment>
+                </field>
+                <field id="maintenance_header" translate="label" type="text" sortOrder="20" showInDefault="1">
+                    <label>Maintenance header name</label>
+                    <comment>Response header to send when maintenance mode is enabled</comment>
+                </field>
+                <field id="cms_page" translate="label" type="editor" sortOrder="30" showInDefault="1">
+                    <label>CMS Page</label>
+                    <comment>CMS Page to display when maintenance mode is enabled</comment>
+                    <frontend_model>Codilar\AdvancedMaintenanceMode\Block\Adminhtml\System\Config\Editor</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
